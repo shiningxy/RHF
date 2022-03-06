@@ -1,27 +1,35 @@
 # Faster R-CNN
 
+## 模型权重文件
+
+* 上传百度网盘中
+
+
+## 数据集文件 CMFD & Original Data
+
+* 上传百度网盘中
+s
 
 ## 环境配置：
 * Python3.6/3.7/3.8
-* Pytorch1.7.1(注意：必须是1.6.0或以上，因为使用官方提供的混合精度训练1.6.0后才支持)
-* pycocotools(Linux:```pip install pycocotools```; Windows:```pip install pycocotools-windows```
-* 详细环境配置见```requirements.txt```
+* Pytorch1.7.1
+* pycocotools(Linux:```pip install pycocotools```; Windows:```pip install pycocotools-windows```)
+* 部分代码参考：https://github.com/WZMIAOMIAO/deep-learning-for-image-processing
 
 ## 文件结构：
-```
-  ├── backbone: 特征提取网络 ResNet50
-  ├── backbone_hdc: ResNet50-HDC 本文的混合膨胀卷积率集成残差网络
-  ├── network_files: Faster R-CNN网络（包括Fast R-CNN以及RPN等模块）
-  ├── train_utils: 训练验证相关模块（包括cocotools）
-  ├── my_dataset.py: 自定义dataset用于读取VOC数据集
-  ├── train_mobilenet.py: 以MobileNetV2做为backbone进行训练
-  ├── train_resnet50_fpn.py: 以resnet50 + FPN作为backbone进行训练
-  ├── train_resnet50_hdc_fpn: 以resnet50-HDC + FPN作为backbone进行训练
-  ├── train_multi_GPU.py: 使用多GPU训练
-  ├── predict.py: 简易的预测脚本，使用训练好的权重进行预测测试
-  ├── validation.py: 利用训练好的权重验证/测试数据的COCO指标，并生成record_mAP.txt文件
-  └── classes.json: pascal_voc标签文件
-```
+* backbone: 特征提取网络 ResNet50
+* backbone_hdc: ResNet50-HDC 本文的混合膨胀卷积率集成残差网络
+* network_files: Faster R-CNN网络（包括Fast R-CNN以及RPN等模块）
+* train_utils: 训练验证相关模块（包括cocotools）
+* my_dataset.py: 自定义dataset用于读取VOC数据集
+* train_mobilenet.py: 以MobileNetV2做为backbone进行训练
+* train_resnet50_fpn.py: 以resnet50 + FPN作为backbone进行训练
+* train_resnet50_hdc_fpn: 以resnet50-HDC + FPN作为backbone进行训练
+* train_multi_GPU.py: 使用多GPU训练
+* predict.py: 简易的预测脚本，使用训练好的权重进行预测测试
+* validation.py: 利用训练好的权重验证/测试数据的COCO指标，并生成record_mAP.txt文件
+* classes.json: pascal_voc标签文件
+
 
 ## 预训练权重下载地址（下载后放入backbone文件夹中）：
 * MobileNetV2 backbone: https://download.pytorch.org/models/mobilenet_v2-b0353104.pth
