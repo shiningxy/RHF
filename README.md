@@ -5,7 +5,7 @@
 * 链接：https://pan.baidu.com/s/1oW3BopexHkJdsQlb79hsdw 提取码：2swh
 
 
-## 数据集文件 CMFD & Original Data
+## 数据集文件 CMFD & Light-CMFD
 
 * 链接：https://pan.baidu.com/s/1wXpmu3sI2pNiaRMzc-e6-A 提取码：yywr 
 
