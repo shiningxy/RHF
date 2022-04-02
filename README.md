@@ -42,10 +42,10 @@
 
 * MaskDatasets_NotAugment 
     * 数据增强前的数据集
-        * num of all_annotations:  37232
-        * num of with_mask:  13229
+        * num of all_annotations:  8232
+        * num of with_mask:  3229
         * num of poor_mask:  2813
-        * num of none_mask:  21190
+        * num of none_mask:  2190
         
 * MaskDatasets_Augment 
     * 数据增强后的数据集
