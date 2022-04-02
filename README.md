@@ -56,6 +56,7 @@
 
 
 ## 训练方法
+* 注意修改*.py中的数据集文件名为自己电脑中的数据集文件名
 * 修改train_res50_fpn.py train_res50_hdc_fpn.py中的参数
     * 修改train_res50_fpn.py 185行 替换data_path
     * 修改train_res50_hdc_fpn.py 185行 替换data_path
