@@ -41,16 +41,16 @@
 ## 数据集
 
 * Light-CMFD 
-      * num of all_annotations:  8232
-      * num of with_mask:  3229
-      * num of poor_mask:  2813
-      * num of none_mask:  2190
+  * num of all_annotations:  8232
+  * num of with_mask:  3229
+  * num of poor_mask:  2813
+  * num of none_mask:  2190
         
 * CMFD:MaskDatasets_Augment 
-      * num of all_annotations:  131422
-      * num of with_mask:  53039
-      * num of poor_mask:  47203
-      * num of none_mask:  31180
+  * num of all_annotations:  131422
+  * num of with_mask:  53039
+  * num of poor_mask:  47203
+  * num of none_mask:  31180
 
 
 ## 训练方法
