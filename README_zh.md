@@ -1,5 +1,7 @@
 # RHF: ResNet50-HDC-FPN-FasterRCNN-CMFD-LCMFD
 
+[English](https://github.com/shiningxy/RHF) | [简体中文](https://github.com/shiningxy/RHF/blob/master/README_zh.md) 
+
 ## 模型权重文件
 
 * 链接：https://pan.baidu.com/s/1oW3BopexHkJdsQlb79hsdw 提取码：2swh
