@@ -1,74 +1,74 @@
 # RHF: ResNet50-HDC-FPN-FasterRCNN-CMFD-LCMFD
 
-## 模型权重文件
+## Model weighting file
 
-* 链接：https://pan.baidu.com/s/1oW3BopexHkJdsQlb79hsdw 提取码：2swh
-
-
-## 数据集文件 CMFD & Light-CMFD
-
-* 链接：https://pan.baidu.com/s/1TLEdIfqfQXI-PT49Snv3aQ 提取码：1111
+* Link: https://pan.baidu.com/s/1oW3BopexHkJdsQlb79hsdw Extraction code: 2swh
 
 
-## 环境配置：
+## Dataset files CMFD & LCMFD
+
+* Link: https://pan.baidu.com/s/1TLEdIfqfQXI-PT49Snv3aQ Extraction code: 1111
+
+
+## Environment configuration.
 * Python3.6/3.7/3.8
 * Pytorch1.7.1
-* pycocotools(Linux:```pip install pycocotools```; Windows:```pip install pycocotools-windows```)
-* 部分代码参考：https://github.com/WZMIAOMIAO/deep-learning-for-image-processing
+* pycocotools(Linux:``pip install pycocotools``; Windows:``pip install pycocotools-windows``)
+* Partial code reference: https://github.com/WZMIAOMIAO/deep-learning-for-image-processing
 
-## 文件结构：
-* backbone: 特征提取网络 ResNet50
-* backbone_hdc: ResNet50-HDC 本文的混合膨胀卷积率集成残差网络
-* network_files: Faster R-CNN网络（包括Fast R-CNN以及RPN等模块）
-* train_utils: 训练验证相关模块（包括cocotools）
-* my_dataset.py: 自定义dataset用于读取VOC数据集
-* train_mobilenet.py: 以MobileNetV2做为backbone进行训练
-* train_resnet50_fpn.py: 以resnet50 + FPN作为backbone进行训练
-* train_resnet50_hdc_fpn: 以resnet50-HDC + FPN作为backbone进行训练
-* train_multi_GPU.py: 使用多GPU训练
-* predict.py: 简易的预测脚本，使用训练好的权重进行预测测试
-* validation.py: 利用训练好的权重验证/测试数据的COCO指标，并生成record_mAP.txt文件
-* classes.json: pascal_voc标签文件
+## File structure.
+* backbone: feature extraction network ResNet50
+* backbone_hdc: ResNet50-HDC The hybrid inflated convolution rate integrated residual network of this paper
+* network_files: Faster R-CNN network (including Fast R-CNN and modules such as RPN)
+* train_utils: training validation related modules (including cocotools)
+* my_dataset.py: custom dataset for reading VOC datasets
+* train_mobilenet.py: use MobileNetV2 as the backbone for training
+* train_resnet50_fpn.py: use resnet50 + FPN as backbone for training
+* train_resnet50_hdc_fpn: train with resnet50-HDC + FPN as backbone
+* train_multi_GPU.py: train with multiple GPUs
+* predict.py: Simple prediction script to perform prediction tests using trained weights
+* validation.py: validate/test the COCO metrics of the data using the trained weights, and generate record_mAP.txt file
+* classes.json: pascal_voc tag file
 
 
-## 预训练权重下载地址（下载后放入backbone文件夹中）：
+## Pre-trained weights download address (download and put in backbone folder).
 * MobileNetV2 backbone: https://download.pytorch.org/models/mobilenet_v2-b0353104.pth
 * ResNet50+FPN backbone: https://download.pytorch.org/models/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth
-* 注意，下载的预训练权重记得要重命名，比如在train_resnet50_fpn.py中读取的是```fasterrcnn_resnet50_fpn_coco.pth```文件，
-  不是```fasterrcnn_resnet50_fpn_coco-258fb6c6.pth```
+* Note that the downloaded pre-training weights should be renamed, e.g., the ``fasterrcnn_resnet50_fpn_coco.pth`` file is read in train_resnet50_fpn.py
+  Not ``fasterrcnn_resnet50_fpn_coco-258fb6c6.pth``
  
  
-## 数据集
+## dataset
 
-* Light-CMFD 
-  * num of all_annotations:  8232
-  * num of with_mask:  3229
-  * num of poor_mask:  2813
-  * num of none_mask:  2190
+* LCMFD 
+  * num of all_annotations: 8232
+  * num of with_mask: 3229
+  * num of poor_mask: 2813
+  * num of none_mask: 2190
         
 * CMFD:MaskDatasets_Augment 
-  * num of all_annotations:  131422
-  * num of with_mask:  53039
-  * num of poor_mask:  47203
-  * num of none_mask:  31180
+  * num of all_annotations: 131422
+  * num of with_mask: 53039
+  * num of poor_mask: 47203
+  * num of none_mask: 31180
 
 
-## 训练方法
-* 注意修改*.py中的数据集文件名为自己电脑中的数据集文件名
-* 修改train_res50_fpn.py train_res50_hdc_fpn.py中的参数
-    * 修改train_res50_fpn.py 185行 替换data_path
-    * 修改train_res50_hdc_fpn.py 185行 替换data_path
-* 确保backbone文件夹内有预训练模型权重
-* 若要训练mobilenetv2+fasterrcnn，直接使用train_mobilenet.py训练脚本
-* 若要训练resnet50+fpn+fasterrcnn，直接使用train_resnet50_fpn.py训练脚本
-* 若要训练resnet50-hdc+fpn+fasterrcnn，直接使用train_resnet50_hdc_fpn.py训练脚本
-* 若要使用多GPU训练，使用```python -m torch.distributed.launch --nproc_per_node=8 --use_env train_multi_GPU.py```指令,```nproc_per_node```参数为使用GPU数量
-* 如果想指定使用哪些GPU设备可在指令前加上```CUDA_VISIBLE_DEVICES=0,3```(例如我只要使用设备中的第1块和第4块GPU设备)
-* ```CUDA_VISIBLE_DEVICES=0,3 python -m torch.distributed.launch --nproc_per_node=2 --use_env train_multi_GPU.py```
+## Training method
+* Note that the dataset file name in *.py is changed to the dataset file name on your computer
+* Modify the parameters in train_res50_fpn.py train_res50_hdc_fpn.py
+    * Modify train_res50_fpn.py line 185 to replace data_path
+    * Modify train_res50_hdc_fpn.py line 185 Replace data_path
+* Make sure the backbone folder contains pre-trained model weights
+* If you want to train mobilenetv2+fasterrcnn, use the train_mobilenet.py training script directly
+* To train resnet50+fpn+fasterrcnn, use the train_resnet50_fpn.py training script directly
+* To train resnet50-hdc+fpn+fasterrcnn, use the train_resnet50_hdc_fpn.py training script directly
+* To train with multiple GPUs, use the ``python -m torch.distributed.launch --nproc_per_node=8 --use_env train_multi_GPU.py`` command, with the ``nproc_per_node`` parameter being the number of GPUs used
+* If you want to specify which GPU devices to use you can prefix the command with ``CUDA_VISIBLE_DEVICES=0,3`` (e.g. I just want to use the 1st and 4th GPU devices in the device)
+* ```CUDA_VISIBLE_DEVICES=0,3 python -m torch.distributed.launch --nproc_per_node=2 --use_env train_multi_GPU.py``
 
-## 注意事项
-* 在使用训练脚本时，注意要将'--data-path'(mask_root)设置为自己存放'MaskDatasets_Augment'或'MaskDatasets_NotAugment'文件夹所在的**根目录**
-* 由于带有FPN结构的Faster RCNN很吃显存，如果GPU的显存不够(如果batch_size小于8的话)建议在create_model函数中使用默认的norm_layer，
-  即不传递norm_layer变量，默认去使用FrozenBatchNorm2d(即不会去更新参数的bn层),使用中发现效果也很好。
-* 在使用预测脚本时，要将'train_weights'设置为你自己生成的权重路径。
-* 使用validation文件时，注意确保你的验证集或者测试集中必须包含每个类别的目标，并且使用时只需要修改'--num-classes'、'--data-path'和'--weights'即可，其他代码尽量不要改动
+## Caution
+* When using the training script, be careful to set '--data-path' (mask_root) to the **root directory** where you store the 'MaskDatasets_Augment' or 'MaskDatasets_NotAugment' folder
+* Since Faster RCNN with FPN structure is very memory hungry, if the GPU memory is not enough (if the batch_size is less than 8), it is recommended to use the default norm_layer in the create_model function.
+  If the GPU memory is not enough (if the batch_size is less than 8), it is recommended to use the default norm_layer in the create_model function.
+* When using the prediction script, set 'train_weights' to your own generated weight path.
+* When using the validation file, take care to make sure that your validation set or test set must contain targets for each class, and use it with only '--num-classes', '--data-path' and '--weights', and leave the rest of the code unchanged as much as possible
