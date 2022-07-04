@@ -1,5 +1,7 @@
 # RHF: ResNet50-HDC-FPN-FasterRCNN-CMFD-LCMFD
 
+[简体中文](https://github.com/shiningxy/RHF/blob/master/README_zh.md) | [English](https://github.com/shiningxy/RHF)
+
 ## Model weighting file
 
 * Link: https://pan.baidu.com/s/1oW3BopexHkJdsQlb79hsdw Extraction code: 2swh
