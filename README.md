@@ -1,4 +1,4 @@
-# ResHdcFace: ResNet50-HDC-FPN-FasterRCNN-CMFD-LCMFD
+# RHF: ResNet50-HDC-FPN-FasterRCNN-CMFD-LCMFD
 
 ## 模型权重文件
 
