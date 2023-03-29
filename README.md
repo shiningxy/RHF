@@ -2,6 +2,24 @@
 
 [简体中文](https://github.com/shiningxy/RHF/blob/master/README_zh.md) | [English](https://github.com/shiningxy/RHF)
 
+# Paper
+
+[Wang, S., Wang, X., & Guo, X. (2023). Advanced Face Mask Detection Model Using Hybrid Dilation Convolution Based Method. Journal of Software Engineering and Applications, 16(1), 1-19.](https://www.scirp.org/pdf/jsea_2023013111424794.pdf)
+
+Use code, data, weights, etc... Please cite 💝
+```
+@article{wang2023advanced,
+  title={Advanced Face Mask Detection Model Using Hybrid Dilation Convolution Based Method},
+  author={Wang, Shaohan and Wang, Xiangyu and Guo, Xin},
+  journal={Journal of Software Engineering and Applications},
+  volume={16},
+  number={1},
+  pages={1--19},
+  year={2023},
+  publisher={Scientific Research Publishing}
+}
+```
+
 ## Model weighting file
 
 * Baidu: https://pan.baidu.com/s/1oW3BopexHkJdsQlb79hsdw  Extraction code: 2swh
