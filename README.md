@@ -4,12 +4,13 @@
 
 ## Model weighting file
 
-* Link: https://pan.baidu.com/s/1oW3BopexHkJdsQlb79hsdw Extraction code: 2swh
-
+* Baidu: https://pan.baidu.com/s/1oW3BopexHkJdsQlb79hsdw  Extraction code: 2swh
+* Dropbox: https://www.dropbox.com/s/rg7dqkr71bylaey/save_weights.zip?dl=0
+* Google Drive: https://drive.google.com/file/d/1-v7t9nGHauiUbF_o69d0gz52LSry1vSA/view?usp=share_link
 
 ## Dataset files CMFD & LCMFD
 
-* Link: https://pan.baidu.com/s/1TLEdIfqfQXI-PT49Snv3aQ Extraction code: 1111
+* Baidu: https://pan.baidu.com/s/1TLEdIfqfQXI-PT49Snv3aQ  Extraction code: 1111
 
 
 ## Environment configuration.
