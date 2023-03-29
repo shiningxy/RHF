@@ -2,14 +2,35 @@
 
 [English](https://github.com/shiningxy/RHF) | [简体中文](https://github.com/shiningxy/RHF/blob/master/README_zh.md) 
 
+# Paper
+
+[Wang, S., Wang, X., & Guo, X. (2023). Advanced Face Mask Detection Model Using Hybrid Dilation Convolution Based Method. Journal of Software Engineering and Applications, 16(1), 1-19.](https://www.scirp.org/pdf/jsea_2023013111424794.pdf)
+
+使用代码、数据或权重，请引用 💝
+```
+@article{wang2023advanced,
+  title={Advanced Face Mask Detection Model Using Hybrid Dilation Convolution Based Method},
+  author={Wang, Shaohan and Wang, Xiangyu and Guo, Xin},
+  journal={Journal of Software Engineering and Applications},
+  volume={16},
+  number={1},
+  pages={1--19},
+  year={2023},
+  publisher={Scientific Research Publishing}
+}
+```
+
+
 ## 模型权重文件
 
-* 链接：https://pan.baidu.com/s/1oW3BopexHkJdsQlb79hsdw 提取码：2swh
+* 百度网盘：https://pan.baidu.com/s/1oW3BopexHkJdsQlb79hsdw   提取码：2swh
+* Dropbox: https://www.dropbox.com/s/rg7dqkr71bylaey/save_weights.zip?dl=0
+* Google Drive: https://drive.google.com/file/d/1-v7t9nGHauiUbF_o69d0gz52LSry1vSA/view?usp=share_link
 
 
 ## 数据集文件 CMFD & Light-CMFD
 
-* 链接：https://pan.baidu.com/s/1TLEdIfqfQXI-PT49Snv3aQ 提取码：1111
+* 百度网盘：https://pan.baidu.com/s/1TLEdIfqfQXI-PT49Snv3aQ 提取码：1111
 
 
 ## 环境配置：
